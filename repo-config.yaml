@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Repository
+metadata:
+  name: my-private-repo
+  namespace: argocd
+spec:
+  type: git
+  repo: https://github.com/Dsamarareddy/ruby-on-rails.git  # Your private GitHub repository URL
+  usernameSecret:
+    name: argocd-repo-secret
+    key: admin
+  passwordSecret:
+    name: argocd-repo-secret
+    key: Hksamara
